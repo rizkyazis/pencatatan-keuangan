@@ -90,6 +90,7 @@
                     url: "/api/saldo",
                     type:"GET",
                     success: function (result) {
+                        console.log(result);
                         let saldo = $("#saldo-total");
                         saldo.empty();
                         saldo.append("Rp."+numberWithCommas(result.data.saldo));

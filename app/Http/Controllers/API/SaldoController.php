@@ -117,7 +117,7 @@ class SaldoController extends Controller
                 'saldo'=>$saldo->saldo
             ]);
 
-            $saldo = Saldo::get()->first()->with('history');
+            $saldo = Saldo::with('history')->first();
             return response()->json([
             'status' => 'Success',
             'code' => '400',
